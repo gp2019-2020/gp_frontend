@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'GpFrontend';
+  page_name = 'Somos Voluntários';
+  login = 'Login';
+  register = 'Registo'
 }

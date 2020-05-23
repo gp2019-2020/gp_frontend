@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "GpFrontend"
+    }
+  },
+  "defaultProject": "GpFrontend",
+  "cli": {
+    "analytics": "7037005b-0fa8-4068-b4ed-81aeb3f1d7f0"
+  }
 }
