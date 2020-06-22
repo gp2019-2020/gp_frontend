@@ -18,13 +18,14 @@
     <a href="#home">{{page_name}}</a>
     <div class="login_register">
       <a href="#home">{{register}}</a> 
-      <a href="#home">{{login}}</a>  
+      <a href="/login">{{login}}</a>  
     </div>
   </div>
   
   <div class="main_content">
     <div class ="main_frame">
       <h3>Main Frame</h3>
+      <router-outlet></router-outlet>
     </div>
   
     <div class="feature_frame">
@@ -37,7 +38,5 @@
       </div>
     </div>
   </div>
-
 </body>
-
 <router-outlet></router-outlet>
