@@ -15,28 +15,14 @@
         <a href="#">Link 3</a>
       </div>
     </div>
-    <a href="#home">{{page_name}}</a>
+    <a href="/">{{page_name}}</a>
     <div class="login_register">
-      <a href="#home">{{register}}</a> 
-      <a href="/login">{{login}}</a>  
+      <a href="/register">{{register}}</a> 
+      <a routerLink='/login'>{{login}}</a>  
     </div>
   </div>
   
   <div class="main_content">
-    <div class ="main_frame">
-      <h3>Main Frame</h3>
       <router-outlet></router-outlet>
-    </div>
-  
-    <div class="feature_frame">
-      <h1> Destaques </h1>
-      <div class="mini-features">
-        <a href="#home">Box 1</a> 
-        <a href="#home">Box 2</a>  
-        <a href="#home">Box 3</a>  
-        <a href="#home">Box 4</a>  
-      </div>
-    </div>
   </div>
 </body>
-<router-outlet></router-outlet>

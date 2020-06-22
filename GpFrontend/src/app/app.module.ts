@@ -2,17 +2,30 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { Routes, RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
+import { RegisterComponent } from './register/register.component';
+
+const routes: Routes = [
+    { path: '', component: MainpageComponent},
+    { path: 'login', component: LoginComponent},
+    { path: 'register', component: RegisterComponent},
+    { path: '**', redirectTo: ''}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    MainpageComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
