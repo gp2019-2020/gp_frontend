@@ -6,11 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
+  
+  title = 'Registar Conta'
   firstName = 'Primeiro Nome'
   lastName = 'Último Nome'
   email = 'Email'
   password = 'Palavra Pass'
+  company = 'Empresa'
+  nif = 'NIF'
   constructor() { }
 
   ngOnInit(): void {
