@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   page_name = 'Somos Voluntários';
   login = 'Login';
-  register = 'Registo'
+  register = 'Registo';
+  profile = 'Perfil'
 
 }

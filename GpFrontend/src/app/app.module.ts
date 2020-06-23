@@ -7,11 +7,16 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { RegisterComponent } from './register/register.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 const routes: Routes = [
     { path: '', component: MainpageComponent},
     { path: 'login', component: LoginComponent},
     { path: 'register', component: RegisterComponent},
+    { path: 'profile', component: ProfileComponent},
+    { path: 'projects', component: ProjectsComponent},
+
     { path: '**', redirectTo: ''}
 ];
 
@@ -20,7 +25,9 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     MainpageComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProfileComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
