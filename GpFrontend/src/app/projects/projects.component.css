@@ -1,0 +1,22 @@
+ table {
+    float: left;
+    margin-top: 2%;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #4991ce;
+    color: white;  
+  }
+
+  tr {
+    border-bottom: 1.5pt solid black;
+  }
+
+  tr:nth-child(even) {background-color: #c4e4ff;}
