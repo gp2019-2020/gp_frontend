@@ -1,0 +1,12 @@
+[
+    {
+        "name":"Project1",
+        "user": "Zé", 
+        "datebegin": "2020-05-01", 
+        "dateend": "2020-05-02", 
+        "hourbegin": "10:30", 
+        "hourend": "17:30", 
+        "local": "Rua das Larangeiras", 
+        "State": "Não Aprovado"
+    }
+]

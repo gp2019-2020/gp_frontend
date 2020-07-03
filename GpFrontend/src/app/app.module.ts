@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { Routes, RouterModule} from '@angular/router';
@@ -10,6 +13,7 @@ import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { CreateProjectComponent } from './projects/create-project/create-project.component';
+import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
     { path: '', component: MainpageComponent},
@@ -18,7 +22,8 @@ const routes: Routes = [
     { path: 'profile', component: ProfileComponent},
     { path: 'projects', component: ProjectsComponent},
     { path: 'createProject', component: CreateProjectComponent},
-    
+    { path: 'users', component: UsersComponent},
+
     { path: '**', redirectTo: ''}
 ];
 
@@ -30,10 +35,12 @@ const routes: Routes = [
     RegisterComponent,
     ProfileComponent,
     ProjectsComponent,
-    CreateProjectComponent
+    CreateProjectComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     RouterModule.forRoot(routes)
   ],

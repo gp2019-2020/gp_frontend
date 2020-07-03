@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
+
 export class RegisterComponent implements OnInit {
   
   title = 'Registar Conta'
@@ -15,9 +16,16 @@ export class RegisterComponent implements OnInit {
   company = 'Empresa'
   nif = 'NIF'
   
-  constructor() { }
+  constructor() {
+
+   }
+
+   teste() {
+    alert("De");
+   }
 
   ngOnInit(): void {
+    
   }
 
 }
