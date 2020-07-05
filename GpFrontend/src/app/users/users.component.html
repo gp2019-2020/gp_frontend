@@ -1,2 +1,32 @@
-<p>users works!</p>
-<button type="submit" (click)="getUsers()" class="btn btn-primary">Submit</button>
+<h3>Lista de Utilizadores</h3>
+
+<div class="search-container">
+    <form action="/">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+  <a routerLink="/createUser">Criar Novo Utilizador</a> 
+<table>
+    <tr>
+      <th>Primeiro Nome</th>
+      <th>Último Nome</th>
+      <th>Empresa</th>
+      <th>NIF</th>
+      <th>Email</th>
+      <th>Editar</th>
+      <th>Eliminar</th>
+    </tr>
+    <tr *ngFor="let entity of entities; index as index">
+       <td>{{ entity.firstname }}</td>
+       <td>{{ entity.lastname }}</td>
+       <td>{{ entity.company }}</td>
+       <td>{{ entity.nif }}</td>
+       <td>{{ entity.email }}</td>
+       <td><button type=button class="btn btn-primary"  (click)="editUser(entity.id)">Editar</button></td>
+       <td><button type=button class="btn btn-primary"  (click)="deleteUser(entity.firstname)">Apagar</button></td>
+    </tr>   
+    
+  </table>
+
+  

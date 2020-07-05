@@ -1,58 +1,42 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { FormGroup, FormArray, FormControl, Validators, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css']
 })
+
 export class UsersComponent implements OnInit {
 
-  constructor() { }
+  entities = [
+    { id: 1, firstname: 'João', lastname: "José", company: "Enlatados Setubalenses LDA", nif: "124578965", email: "company1@hotmail.com" },
+    { id: 2, firstname: 'Zé', lastname: "António", company: "", nif: "", email: "zeantonio@hotmail.com" },
+  ]
 
-  ngOnInit(): void {
-  }
+  controls: FormArray;
 
-  getUsers() {
-    var req = new XMLHttpRequest();
-    req.open("GET", "/api/projects/");
-    req.addEventListener("load", function() {
-        var projects = JSON.parse(this.responseText);
-        console.log(projects);
-        var tb = document.getElementById('projects');
-        console.log(tb)
-        tb.innerHTML = '';
-        for (var i in projects) {
-            var tr = document.createElement('tr');
-
-            var tdTitle = document.createElement('td');
-            var tdCreated = document.createElement('td');
-            var tdUpdated = document.createElement('td');
-            var tdButtonProjectActions = document.createElement('td');
-            var tdButtonTasksView = document.createElement('td');
-            
-            tdTitle.innerHTML = "<input type='text' class='form-control' id='"+projects[i].id+"Title' name='title' placeholder='"+projects[i].title+"'>";
-            tdCreated.innerHTML = projects[i].creation_date;
-            tdUpdated.innerHTML = projects[i].last_updated;
-            tdButtonProjectActions.innerHTML = 
-                "<div class='btn-group' role='group' aria-label='Basic example'>"+
-                    "<button type='button' type='submit' onclick='updateProject(" + projects[i].id +  ")' class='btn btn-outline-success'>Update</button>"+
-                    "<button type='button' type='submit' onclick='deleteProject(" + projects[i].id +  ")' class='btn btn-outline-danger'>Delete</button>"+
-                "</div>";
-            tdButtonTasksView.innerHTML =
-                "<button type='button' class='btn btn-info' onclick='getTasks(" + projects[i].id +  ")'  data-toggle='modal' data-target='#ModalCenter'>"+
-                    "Ver Taregas"+
-                "</button>";
-            
-            tr.appendChild(tdTitle);
-            tr.appendChild(tdCreated);
-            tr.appendChild(tdUpdated);
-            tr.appendChild(tdButtonProjectActions);
-            tr.appendChild(tdButtonTasksView);
-
-            tb.appendChild(tr);
-        }
+  ngOnInit() {
+    const toGroups = this.entities.map(entity => {
+      return new FormGroup({
+        id: new FormControl(entity.id),
+        firstname: new FormControl(entity.firstname, Validators.required),
+        lastname: new FormControl(entity.lastname),
+        company: new FormControl(entity.company),
+        nif: new FormControl(entity.nif),
+        email: new FormControl(entity.email, Validators.required),
+      });
     });
-    req.send();
+    this.controls = new FormArray(toGroups);
   }
 
+  deleteUser(name: string) {
+    if(confirm("Têm a certeza que quer eleminar "+name)) {
+      alert("Eliminado!")
+    }
+  }
+
+  editUser(id: string){
+    alert("Going to Edit User");
+  }
 }

@@ -22,42 +22,18 @@
         <th>Alterar Detalhes</th>
         <th>Eliminar</th>
       </tr>
-      <tr>
-        <td>Projeto 1</td>
-        <td>Zé</td>
-        <td>2020-05-01</td>
-        <td>2020-05-01</td>
-        <td>10h30</td>
-        <td>17h50</td>
-        <td>Rua das Laranjeiras</td>
-        <td>Não</td>
-        <td>Editar</td>
-        <td>Apagar</td>
-      </tr>
-      <tr>
-        <td>Projeto 2</td>
-        <td>Maria</td>
-        <td>2020-05-10</td>
-        <td>2020-05-12</td>
-        <td>10h30</td>
-        <td>17h50</td>
-        <td>Rua das Maças</td>
-        <td>Aprovado</td>
-        <td>Editar</td>
-        <td>Apagar</td>
-      </tr>
-      <tr>
-        <td>Projeto 3</td>
-        <td>Organização KKK</td>
-        <td>2020-05-20</td>
-        <td>2020-05-24</td>
-        <td>09h30</td>
-        <td>18h</td>
-        <td>Lisboa</td>
-        <td>Por aprovar</td>
-        <td>Editar</td>
-        <td>Apagar</td>
-      </tr>
+      <tr *ngFor="let entity of entities; index as index">
+        <td>{{ entity.name }}</td>
+        <td>{{ entity.user }}</td>
+        <td>{{ entity.datebegin }}</td>
+        <td>{{ entity.dateend }}</td>
+        <td>{{ entity.hourbegin }}</td>
+        <td>{{ entity.hourend }}</td>
+        <td>{{ entity.local }}</td>
+        <td>{{ entity.state }}</td>
+        <td><button type=button class="btn btn-primary"  (click)="editProject('Projeto 1')">Editar</button></td>
+        <td><button type=button class="btn btn-primary"  (click)="deleteProject('Projeto 1')">Apagar</button></td>
+     </tr>  
     </table>
   </div>
 
