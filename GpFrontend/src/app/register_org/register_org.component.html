@@ -1,10 +1,12 @@
 
-
 <div class ="main_frame">
     <h1>{{title}}</h1>
 </div>
 
-<div class= "form_container">
+
+  <div class = "tab_content" data-tab="2">
+    <div id = "Organizacao" class="form_divs">
+        <h3>Registar Organização</h3>
         <form>
             <div class="row">
                 <div class="col-25">
@@ -38,7 +40,7 @@
                     <label>{{nif}}</label>
                 </div>
                 <div class="col-75">
-                    <input type="number" id="company" placeholder="2*******" />
+                    <input type="number" min = 0 id="company" placeholder="2*******" />
                 </div>
             </div>
 
@@ -60,10 +62,8 @@
                 </div>
             </div>
 
-            <input type='submit' value='Guardar Alterações' />
-
+            <input type='submit' value='Registar' />
+            <input type="reset" value = "Limpar Campos">
         </form>
-        
-        <input type='submit' value='test' (click)="testAlert()"/>
-</div>
+  </div>
 
