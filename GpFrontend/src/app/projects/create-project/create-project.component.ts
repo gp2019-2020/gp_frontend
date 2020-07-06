@@ -12,4 +12,9 @@ export class CreateProjectComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  createProject(){
+    alert("Inserted Project");
+    document.location.href = '/projects';
+  }
+  
 }
