@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ThemeService } from './theme/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +11,18 @@ export class AppComponent {
   page_name = 'Somos Voluntários';
   login = 'Login';
   register = 'Registo';
-  profile = 'Perfil'
+  register_org = 'Organizações';
+  profile = 'Perfil';
 
+  constructor(private themeService: ThemeService) {}
+
+  toggle() {
+    const active = this.themeService.getActiveTheme() ;
+    if (active.name === 'light') {
+      this.themeService.setTheme('dark');
+    } else {
+      this.themeService.setTheme('light');
+    }
+    //console.log("theme is " + active.name);
+  }
 }

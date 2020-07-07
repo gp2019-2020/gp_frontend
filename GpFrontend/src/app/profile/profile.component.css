@@ -24,7 +24,7 @@
     margin-top: 1%;
 
   }
-  
+
   .col-75 {
     float: left;
     margin-left: 2%;
@@ -42,7 +42,7 @@
     padding: 12px 12px 12px 0;
     float: left;
   }
-  
+
   input, select, textarea {
     width: 100%;
     padding: 12px;
@@ -62,11 +62,51 @@
     margin-top: 1%;
     width: 30%;
   }
-  
+
   input[type=submit]:hover, input[type=reset]:hover {
     background-color: #2a4f70;
   }
 
-  .form_container {
-    margin-left: 5%;
+  /*Form para a esquerda*/
+
+  .left_form{
+    width: 60%;
+    float: left;
+    text-align:left;
   }
+
+  .button_actions{
+    float: center;
+    text-align: center;
+  }
+
+  /*Grelha de projetos*/
+
+  .user_projects{
+    width: 40%;
+    float: right;
+
+  }
+
+  .user_projects table {
+    float: left;
+    margin-top: 2%;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .user_projects th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  .user_projects th {
+    background-color: #4991ce;
+    color: white;
+  }
+
+  .user_projects tr {
+    border-bottom: 1.5pt solid black;
+  }
+
+  .user_projects tr:nth-child(even) {background-color: #c4e4ff;}

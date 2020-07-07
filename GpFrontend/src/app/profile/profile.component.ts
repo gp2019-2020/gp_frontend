@@ -21,7 +21,7 @@ export class ProfileComponent implements OnInit {
   }
 
   testAlert(){
-    const conf = confirm('It just works');
+    const conf = confirm('Ao aceitar remover os seus dados, o utilizador está a \nconfirmar que a sua conta e projetos de voluntariado \nem que contribuiu serão eliminados. \n\nPretende continuar?');
     if( conf == true ){
       console.log('Pressed OK');
     }else{

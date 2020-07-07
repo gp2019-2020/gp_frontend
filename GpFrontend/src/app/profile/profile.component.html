@@ -4,6 +4,7 @@
     <h1>{{title}}</h1>
 </div>
 
+<div class = "left_form">
 <div class= "form_container">
         <form>
             <div class="row">
@@ -26,24 +27,6 @@
 
             <div class="row">
                 <div class="col-25">
-                    <label>{{company}}</label>
-                </div>
-                <div class="col-75">
-                    <input type="text" id="company" placeholder="Nome da empresa...." />
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-25">
-                    <label>{{nif}}</label>
-                </div>
-                <div class="col-75">
-                    <input type="number" id="company" placeholder="2*******" />
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-25">
                     <label>{{email}}</label>
                 </div>
                 <div class="col-75">
@@ -60,10 +43,32 @@
                 </div>
             </div>
 
-            <input type='submit' value='Guardar Alterações' />
-
         </form>
-        
-        <input type='submit' value='test' (click)="testAlert()"/>
+
+</div>
+<div class = "button_actions">
+    <input type='submit' value='Guardar Alterações' />
+    <input type='submit' value='Eliminar utilizador' (click)="testAlert()"/>
+</div>
+
+</div>
+
+
+
+<div class="user_projects">
+  <table>
+    <tr>
+      <th>Nome</th>
+      <th>Utilizador</th>
+      <th>Data Inicio</th>
+      <th>Data Fim</th>
+      <th>Hora Inicio</th>
+      <th>Hora Fim</th>
+      <th>Localização</th>
+      <th>Estado</th>
+      <th>Alterar Detalhes</th>
+      <th>Eliminar</th>
+    </tr>
+  </table>
 </div>
 

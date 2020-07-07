@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
   }
-  
+
   body {
     margin:0%;
   }
@@ -10,7 +10,7 @@ body {
     overflow: hidden;
     background-color: #4991ce;
   }
-  
+
   .navbar a {
     float: left;
     font-size: 16px;
@@ -27,14 +27,14 @@ body {
     text-align: center;
     text-decoration: none;
   }
-  
+
   .dropdown {
     float: left;
     overflow: hidden;
   }
-  
+
   .dropdown .dropbtn {
-    font-size: 16px;  
+    font-size: 16px;
     border: none;
     outline: none;
     color: white;
@@ -43,11 +43,11 @@ body {
     font-family: inherit;
     margin: 0;
   }
-  
+
   .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: red;
   }
-  
+
   .dropdown-content {
     display: none;
     position: absolute;
@@ -56,7 +56,7 @@ body {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-  
+
   .dropdown-content a {
     float: none;
     color: black;
@@ -65,11 +65,11 @@ body {
     display: block;
     text-align: left;
   }
-  
+
   .dropdown-content a:hover {
     background-color: #ddd;
   }
-  
+
   .dropdown:hover .dropdown-content {
     display: block;
   }
@@ -99,7 +99,7 @@ body {
     margin-top: 1%;
 
   }
-  
+
   .col-75 {
     float: left;
     margin-left: 2%;
@@ -117,7 +117,7 @@ body {
     padding: 12px 12px 12px 0;
     float: left;
   }
-  
+
   input, select, textarea {
     width: 100%;
     padding: 12px;
@@ -125,7 +125,7 @@ body {
     border-radius: 4px;
     resize: vertical;
   }
-  
+
 
   input[type=submit]{
     margin-left: 13.5%;
@@ -141,20 +141,20 @@ body {
     cursor: pointer;
     float: center;
     margin-top: 1%;
-    width: 17.5%;
+    width: 20%;
   }
-  
+
   input[type=submit]:hover, input[type=reset]:hover {
     background-color: #2a4f70;
   }
 
   .form_divs {
     float:left;
-    width:45%;
+    width:70%;
     border-style: double;
     border-color: #8ac6fa;
   }
 
   .form_container {
-    margin-left: 10%;
+    margin-left: 30%;
   }
