@@ -7,7 +7,7 @@
     </form>
   </div>
 
-  <a routerLink="/createProject">Criar Novo Projeto</a> 
+  <a routerLink="/createProject">Criar Novo Projeto</a>
 <div style="overflow-x:auto;">
     <table>
       <tr>
@@ -31,9 +31,9 @@
         <td>{{ entity.hourend }}</td>
         <td>{{ entity.local }}</td>
         <td>{{ entity.state }}</td>
-        <td><button type=button class="btn btn-primary"  (click)="editProject('Projeto 1')">Editar</button></td>
+        <td><button type=submit class="btn btn-primary"  (click)="editProject('Projeto 1')">Editar</button></td>
         <td><button type=button class="btn btn-primary"  (click)="deleteProject('Projeto 1')">Apagar</button></td>
-     </tr>  
+     </tr>
     </table>
   </div>
 

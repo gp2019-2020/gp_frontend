@@ -12,10 +12,10 @@ export class ProjectsComponent implements OnInit {
   constructor() { }
 
   entities = [
-    { id: 1, name: 'Projecto de voluntariado - Eusouvoluntario', user: "António", datebegin: "10/07/2020", 
+    { id: 1, name: 'Projecto de voluntariado - Eusouvoluntario', user: "António", datebegin: "10/07/2020",
         dateend: "10/07/2020", hourbegin: "17:00", hourend: "18:00",
         local: "Setúbal", state: "Não aprovado"},
-    { id: 2, name: 'Limpeza das praias', user: "José", datebegin: "20/06/2020", 
+    { id: 2, name: 'Limpeza das praias', user: "José", datebegin: "20/06/2020",
     dateend: "20/06/2020", hourbegin: "08:00", hourend: "18:00",
     local: "Costa da Capariga", state: "Aguardar aprovação"},
   ]
@@ -40,12 +40,13 @@ export class ProjectsComponent implements OnInit {
   }
 
   deleteProject(name: string) {
-    if(confirm("Têm a certeza que quer eleminar  "+name)) {
+    if(confirm("Têm a certeza que quer eliminar  "+name + "?")) {
       alert("Eliminado!")
     }
   }
 
   editProject(name: string){
-    alert("Going to Edit Project");
+    //alert("Going to Edit Project");
+    document.location.href = '/edit-project', true
   }
 }

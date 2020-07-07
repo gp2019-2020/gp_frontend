@@ -1,6 +1,6 @@
 
 <div class ="main_frame">
-    <h1>Novo projeto de voluntariado</h1>
+    <h1>Edição de Projeto</h1>
 </div>
 
 <div class= "form_container">
@@ -43,6 +43,15 @@
             </div>
 
             <div class="row">
+              <div class="col-25">
+                  <label>Estado</label>
+              </div>
+              <div class="col-75">
+                  <input type="text" id="local" placeholder="Estado..."/>  <br>
+              </div>
+          </div>
+
+            <div class="row">
                 <div class="col-25">
                     <label>Detalhes</label>
                 </div>
@@ -51,7 +60,7 @@
                     </textarea>
                 </div>
             </div>
-            <input type="reset"value='Registar' (click)="createProject()" />
+            <input type="reset"value='Editar' (click)="editProject()" />
             <span></span>
             <input type="reset" value = "Limpar Campos">
         </form>

@@ -1,0 +1,20 @@
+<div class ="main_frame">
+    <h1>Detalhes de Utilizador</h1>
+</div>
+
+<body>
+  <div class = "user_data">
+    <table>
+    <tr *ngFor="let entity of entities; index as index">
+        <td>{{ entity.firstname }}</td>
+        <td>{{ entity.lastname }}</td>
+        <td>{{ entity.company }}</td>
+        <td>{{ entity.nif }}</td>
+        <td>{{ entity.email }}</td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+
+

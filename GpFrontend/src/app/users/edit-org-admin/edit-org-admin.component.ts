@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile_org.component.html',
-  styleUrls: ['./profile_org.component.css']
+  selector: 'app-org',
+  templateUrl: './edit-org-admin.component.html',
+  styleUrls: ['./edit-org-admin.component.css']
 })
-export class ProfileComponent implements OnInit {
+export class EditOrgAdminComponent implements OnInit {
 
-  title = 'Editar Perfil';
+  title = 'Editar Organização';
   firstName = 'Primeiro Nome';
   lastName = 'Último Nome';
   email = 'Email';
@@ -28,4 +28,5 @@ export class ProfileComponent implements OnInit {
       console.log('Pressed Cancel');
     }
   }
+
 }

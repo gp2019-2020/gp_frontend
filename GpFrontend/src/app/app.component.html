@@ -2,6 +2,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 </head>
 <body>
 
@@ -12,11 +13,11 @@
       </button>
       <div class="dropdown-content">
         <a href="viewprojects">Projetos Voluntariado</a>
-        <a href="#">Propor Voluntariado</a>
-        <a href="#">Propor Voluntariado Empresa</a>
+        <a href="createProject">Propor Voluntariado</a>
+        <a href="createProjectOrg">Propor Voluntariado Empresa</a>
         <a href="#">Estatisticas</a>
         <a href="users">Gerir Utilizadores</a>
-        <a href="#">Gerir Organizações</a>
+        <a href="orgs">Gerir Organizações</a>
         <a href="projects">Gerir Projetos</a>
         <a href="#">Outros</a>
       </div>
@@ -28,20 +29,9 @@
       <a routerLink="/register_org">{{register_org}}</a>
       <a routerLink='/login'>{{login}}</a>
     </div>
-    <div>
-      <label class="switch">
-      <input type="checkbox" (click)="toggle()" >
-      <span class="slider round"></span>
-    </label>
-  </div>
   </div>
 
-  <div class = "main container">
-    <div class="main_content">
+  <div class="main_content">
       <router-outlet></router-outlet>
-    </div>
-
-
   </div>
-
 </body>

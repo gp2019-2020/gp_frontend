@@ -3,7 +3,7 @@
     <h1>Criar novo utilizador</h1>
 </div>
 
-<div class= "form_container">
+<div class= "form_container"> 
         <form>
             <div class="row">
                 <div class="col-25">
@@ -13,7 +13,7 @@
                     <input type="text" id="firstName" placeholder="Primeiro nome...."/>
                 </div>
             </div>
-
+    
             <div class="row">
                 <div class="col-25">
                     <label>{{lastName}}</label>
@@ -22,7 +22,25 @@
                     <input type="text" id="lastName" placeholder="Último nome...." />
                 </div>
             </div>
-
+            
+            <div class="row">
+                <div class="col-25">
+                    <label>{{company}}</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="company" placeholder="Nome da empresa...." />
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-25">
+                    <label>{{nif}}</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" id="company" placeholder="2*******" />
+                </div>
+            </div>
+    
             <div class="row">
                 <div class="col-25">
                     <label>{{email}}</label>
@@ -31,7 +49,7 @@
                     <input type="email" id="email" placeholder="exemplo@hotmail.com"/>
                 </div>
             </div>
-
+    
             <div class="row">
                 <div class="col-25">
                     <label>{{password}}</label>
@@ -40,9 +58,9 @@
                     <input type="password" id="password" placeholder="P1ss_wOr4"/>  <br>
                 </div>
             </div>
-
+       
             <input type='reset' value='Registar' (click)="createUser()" />
             <input type="reset" value = "Limpar Campos">
         </form>
 </div>
-
+    
