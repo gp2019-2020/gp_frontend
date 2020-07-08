@@ -6,7 +6,6 @@
 
 <div class = "left_form">
 <div class= "form_container">
-        <form>
             <div class="row">
                 <div class="col-25">
                     <label>{{firstName}}</label>
@@ -43,11 +42,9 @@
                 </div>
             </div>
 
-        </form>
-
 </div>
 <div class = "button_actions">
-    <input type='submit' value='Guardar Alterações' />
+    <input type='submit' value='Guardar Alterações' (click)="userEditModule()"/>
     <input type='submit' value='Eliminar utilizador' (click)="testAlert()"/>
 </div>
 
@@ -62,8 +59,7 @@
       <th>Utilizador</th>
       <th>Data Inicio</th>
       <th>Data Fim</th>
-      <th>Hora Inicio</th>
-      <th>Hora Fim</th>
+      <th>Horas de Trabalho</th>
       <th>Localização</th>
       <th>Estado</th>
       <th>Alterar Detalhes</th>

@@ -1,15 +1,22 @@
 <h3>Todos os projetos de voluntariado disponiveis</h3>
 
-<div class="feature_frame">
-  <div class="mini-features">
-    <div class="mini-features-content" *ngFor="let entity of entities; index as index">
-     <b>Nome: </b>{{ entity.name }}<br>
-     <b>Data: </b>{{ entity.datebegin }} até {{ entity.dateend }}<br>
-     <b>Horas: </b>{{ entity.hourbegin }} até {{ entity.hourend }}<br>
-     <b>Local: </b>{{ entity.local }}<br>
-     <b>Descrição: </b>{{ entity.description }}<br>
-     <b>Estado: </b>{{ entity.state }}<br>
-     <button (Click)="applyForProject()">Candidatar</button> 
-    </div>  
-  </div>
-</div>
+
+<table class="table table-hover">
+  <thead>
+      <tr>
+        <th scope="col">Nome do Projeto</th>
+        <th scope="col">Data de inicio</th>
+        <th scope="col">Horas de Trabalho</th>
+        <th scope="col">Local: </th>
+        <th scope="col">Descrição: </th>
+        <th scope="col">Estado: </th>
+        <th scope="col">Ação 1</th>
+      </tr>
+    </thead>
+    <tbody id="projects">
+      <tr>
+        <td></td>
+        <td>Loading...</td>
+        <td></td>
+      </tr>
+</table>

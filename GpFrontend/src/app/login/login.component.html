@@ -2,7 +2,6 @@
 
 <div class= "form_container">
     <div class="form_divs">
-        <form>
             <div class="row">
                 <div class="col-25">
                     <label>{{email}}</label>
@@ -11,7 +10,7 @@
                     <input type="email" id="email" placeholder="exemplo@hotmail.com"/>
                 </div>
             </div>
-    
+
             <div class="row">
                 <div class="col-25">
                     <label>{{password}}</label>
@@ -20,9 +19,7 @@
                     <input type="password" id="password" placeholder="P1ss_wOr4"/>  <br>
                 </div>
             </div>
-       
-            <input type='submit' value='Registar' />
-            <input type="reset" value = "Limpar Campos">
-        </form>
+
+            <input type='submit' value='Entrar' (click)="userLoginModule()"/>
     </div>
 </div>

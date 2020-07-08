@@ -22,6 +22,7 @@
     "angular": "^1.7.9",
     "angular-in-memory-web-api": "^0.11.0",
     "arkit": "^1.6.4",
+    "canvasjs": "^1.8.3",
     "jquery": "^3.5.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

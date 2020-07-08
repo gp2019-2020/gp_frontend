@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+////#region
+declare function loadMe(page) : any;
+declare function userEdit() : any;
+////#endregion
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -18,6 +22,7 @@ export class ProfileComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    loadMe("myProfile");
   }
 
   testAlert(){
@@ -27,5 +32,9 @@ export class ProfileComponent implements OnInit {
     }else{
       console.log('Pressed Cancel');
     }
+  }
+
+  userEditModule(){
+    userEdit();
   }
 }

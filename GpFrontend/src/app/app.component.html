@@ -12,26 +12,28 @@
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="viewprojects">Projetos Voluntariado</a>
-        <a href="createProject">Propor Voluntariado</a>
-        <a href="createProjectOrg">Propor Voluntariado Empresa</a>
-        <a href="#">Estatisticas</a>
-        <a href="users">Gerir Utilizadores</a>
-        <a href="orgs">Gerir Organizações</a>
-        <a href="projects">Gerir Projetos</a>
-        <a href="#">Outros</a>
+        <a id= "viewprojects" href="viewprojects">Projetos Voluntariado</a>
+        <a id= "createProject" href="createProject">Propor Voluntariado</a>
+        <a id = "createProjectOrg" href="createProjectOrg">Propor Voluntariado Empresa</a>
+        <a id = "statistics" href="#">Estatisticas</a>
+        <a id = "users" href="users">Gerir Utilizadores</a>
+        <a id = "orgs" href="orgs">Gerir Organizações</a>
+        <a id = "projects" href="projects">Gerir Projetos</a>
+        <a id = "others" href="#">Outros</a>
       </div>
     </div>
     <a href="/">{{page_name}}</a>
     <div class="login_register">
-      <a routerLink="/profile">{{profile}}</a>
-      <a routerLink="/register">{{register}}</a>
-      <a routerLink="/register_org">{{register_org}}</a>
-      <a routerLink='/login'>{{login}}</a>
+      <a id = "profile" routerLink="/profile">{{profile}}</a>
+      <a id = "register" routerLink="/register">{{register}}</a>
+      <a id = "register_org" routerLink="/register_org">{{register_org}}</a>
+      <a id = "login" routerLink='/login'>{{login}}</a>
+      <a id = "logout" (click)="userLogoutModule()">Logout</a>
     </div>
   </div>
 
   <div class="main_content">
+
       <router-outlet></router-outlet>
   </div>
 </body>
